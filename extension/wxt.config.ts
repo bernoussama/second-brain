@@ -12,5 +12,9 @@ export default defineConfig({
     },
   },
   }),
+  manifest: {
+    permissions: ["contextMenus", "activeTab"],
+    host_permissions: ["<all_urls>"]
+  },
   modules: ['@wxt-dev/module-react'],
 });
