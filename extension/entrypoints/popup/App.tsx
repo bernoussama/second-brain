@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Settings, MessageSquare, Send, Bot } from 'lucide-react';
+import { Settings, Bot, Send } from 'lucide-react';
 
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
@@ -27,9 +27,9 @@ function App() {
   };
 
   return (
-    <div className="flex flex-col h-[600px] w-[400px] text-foreground bg-background dark">
+    <div className="flex flex-col h-[600px] w-[400px] text-foreground bg-background dark overflow-hidden">
       {/* Header */}
-      <header className="flex items-center justify-between p-3 border-b border-border">
+      <header className="flex items-center justify-between p-3 border-b border-border shrink-0">
         <div className="flex items-center space-x-2">
           <Bot className="h-6 w-6 text-primary" />
           <h1 className="text-lg font-semibold">2ndBrain</h1>
@@ -52,7 +52,7 @@ function App() {
       </header>
 
       {/* Main Content Area */}
-      <main className="flex-1 p-4 overflow-y-auto space-y-4">
+      <main className="flex-1 p-4 overflow-y-auto space-y-4 custom-scrollbar">
         {/* Placeholder for chat messages or other content */}
         <div className="flex items-start space-x-3">
           <Avatar>
@@ -77,7 +77,7 @@ function App() {
       <Separator />
 
       {/* Footer - Chat Input */}
-      <footer className="p-3 border-t border-border">
+      <footer className="p-3 border-t border-border shrink-0">
         <div className="flex items-center space-x-2">
           <Input
             type="text"
